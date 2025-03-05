@@ -109,6 +109,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    while True:
         asyncio.run(main())
-        time.sleep(3600)  # Проверка каждые 1 час
