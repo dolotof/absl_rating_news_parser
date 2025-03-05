@@ -16,7 +16,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Конфигурация
-print("Environment variables:", os.environ.keys())  # Добавь эту строку
+print("Environment variables:", os.environ.keys())  # Отладка
 CHAT_ID = os.environ['CHAT_ID']  # Используем секрет
 BOT_TOKEN = os.environ['BOT_TOKEN']  # Используем секрет
 BASE_URL = 'https://absolute-rating.mirtesen.ru/?page=1'
