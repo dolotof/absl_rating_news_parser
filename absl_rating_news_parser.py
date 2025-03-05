@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 
 # Конфигурация
 print("Environment variables:", os.environ.keys())  # Отладка
-BOT_TOKEN = os.environ['BOT_TOKEN']  # Используем секрет
-CHAT_ID = os.environ['CHAT_ID']  # Используем секрет
+CHAT_ID = '-1002488271797'  # Временное значение
+BOT_TOKEN = '8029660648:AAFQqYsYrq9Z96WufQTUAupnLRflZ9S4yns'  # Временное значение
 BASE_URL = 'https://absolute-rating.mirtesen.ru/?page=1'
 DB_FILE = 'processed_news.json'
 
