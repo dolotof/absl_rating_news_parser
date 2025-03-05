@@ -1,8 +1,7 @@
 name: Run News Parser
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Каждый 6 часов
- # workflow_dispatch:  # Добавленная строка..
+    - cron: '*/30 * * * *'  # Каждый 30 минут
 jobs:
   build:
     runs-on: ubuntu-latest
