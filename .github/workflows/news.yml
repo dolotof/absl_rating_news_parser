@@ -2,7 +2,7 @@ name: Run News Parser
 on:
   schedule:
     - cron: '*/30 * * * *'  # Каждый 30 минут
-#  workflow_dispatch:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
