@@ -1,24 +1,25 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 from telegram import Bot
 import asyncio
 import json
 import logging
-import os
 import time
-import os
-BOT_TOKEN = os.environ['BOT_TOKEN']
-CHAT_ID = os.environ['CHAT_ID']
 
 # Настройка логирования
-logging.basicConfig(filename='parser.log',
-                    level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    filename='parser.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
 
 # Конфигурация
+CHAT_ID = os.environ['CHAT_ID']  # Используем секрет
+BOT_TOKEN = os.environ['BOT_TOKEN']  # Используем секрет
 BASE_URL = 'https://absolute-rating.mirtesen.ru/?page=1'
-DB_FILE = 'processed_news.json'  # Замените yourusername на ваш логин PythonAnywhere
+DB_FILE = 'processed_news.json'
 
 # Инициализация бота
 bot = Bot(token=BOT_TOKEN)
