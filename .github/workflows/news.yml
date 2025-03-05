@@ -1,7 +1,7 @@
 name: Run News Parser
  on:
   schedule:
-    - cron: '*/30 * * * *'  # Каждый 30 минут
+    - cron: '*/60 * * * *'  # Каждый 30 минут
   workflow_dispatch:
 jobs:
   build:
