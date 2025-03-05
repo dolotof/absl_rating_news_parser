@@ -14,8 +14,9 @@ logging.basicConfig(filename='parser.log',
 logger = logging.getLogger(__name__)
 
 # Конфигурация
-CHAT_ID = '-1002488271797'
-BOT_TOKEN = '8029660648:AAFQqYsYrq9Z96WufQTUAupnLRflZ9S4yns'
+import os
+BOT_TOKEN = os.environ['BOT_TOKEN']
+CHAT_ID = os.environ['CHAT_ID']
 BASE_URL = 'https://absolute-rating.mirtesen.ru/?page=1'
 DB_FILE = 'processed_news.json'  # Замените yourusername на ваш логин PythonAnywhere
 
