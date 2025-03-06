@@ -5,24 +5,15 @@ from telegram import Bot
 import asyncio
 import json
 import logging
-import time
 
-# Настройка логирования
-logging.basicConfig(
-    filename='parser.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+logging.basicConfig(filename='parser.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Конфигурация
-print("Environment variables:", os.environ.keys())  # Отладка
-CHAT_ID = os.environ['CHAT_ID']  # Используем секрет
-BOT_TOKEN = os.environ['BOT_TOKEN']  # Используем секрет
+CHAT_ID = os.environ['CHAT_ID']
+BOT_TOKEN = os.environ['BOT_TOKEN']
 BASE_URL = 'https://absolute-rating.mirtesen.ru/?page=1'
 DB_FILE = 'processed_news.json'
 
-# Инициализация бота
 bot = Bot(token=BOT_TOKEN)
 
 
