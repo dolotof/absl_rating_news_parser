@@ -1,15 +1,15 @@
-name: Run News Parser
-on:
-  schedule:
-    - cron: '*/30 * * * *'  # Каждые 30 минут
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install requests beautifulsoup4 python-telegram-bot
-      - run: python absl_rating_news_parser.py
+# name: Run News Parser
+# on:
+#  schedule:
+#    - cron: '*/30 * * * *'  # Каждые 30 минут
+#  workflow_dispatch:
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/setup-python@v5
+#        with:
+#          python-version: '3.11'
+#      - run: pip install requests beautifulsoup4 python-telegram-bot
+#      - run: python absl_rating_news_parser.py
